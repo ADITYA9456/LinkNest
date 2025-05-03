@@ -29,7 +29,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg md:text-xl relative opacity-80">
-              LinkNest helps you organize all your important links, content, and socials in one beautiful, customizable page. Whether you're a creator, entrepreneur, or brand — make your online presence unforgettable.
+              LinkNest helps you organize all your important links content and socials in one beautiful customizable page. Whether you are a creator  entrepreneur  or brand   make your online presence unforgettableṣ
             </p>
             <div className="flex items-center gap-4">
               <input value={text} onChange={(e)=> setText(e.target.value)} type="text" placeholder="yourusername" className="px-4 py-3 rounded-full bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
@@ -48,7 +48,7 @@ export default function Home() {
                 {/* Profile Image */}
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-md hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/profile.jpg"
+                    src="/profilepic.jpg"
                     alt="Anna"
                     width={80}
                     height={80}
@@ -123,7 +123,7 @@ export default function Home() {
     {/* Card 1 */}
     <div className="bg-[#2b2b2b] rounded-2xl p-6 shadow-xl hover:shadow-purple-500/20 transition-shadow text-center">
       <div className="w-14 h-14 mx-auto mb-4">
-        <img src="/magic.gif" alt=" stat" />
+        <Image width={100} height={100} src="/magic.gif" alt=" stat" />
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">Instant Setup</h3>
       <p className="text-gray-300">Create and customize your LinkNest in seconds, no coding needed.</p>
@@ -132,7 +132,7 @@ export default function Home() {
     {/* Card 2 */}
     <div className="bg-[#2b2b2b] rounded-2xl p-6 shadow-xl hover:shadow-purple-500/20 transition-shadow text-center">
       <div className="w-14 h-14 mx-auto mb-4">
-        <img src="/gear.gif" alt="Fully Customizable" className="w-full h-full object-contain" />
+        <Image  width={50}  height={50}  src="/gear.gif" alt="Fully Customizable" className="w-full h-full object-contain" />
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">Fully Customizable</h3>
       <p className="text-gray-300">Themes, fonts, colors — make it truly yours with endless styles.</p>
@@ -141,7 +141,7 @@ export default function Home() {
     {/* Card 3 */}
     <div className="bg-[#2b2b2b] rounded-2xl p-6 shadow-xl hover:shadow-purple-500/20 transition-shadow text-center">
       <div className="w-14 h-14 mx-auto mb-4">
-        <img src="/signal.gif" alt="Mobile Optimized" className="w-full h-full object-contain" />
+        <Image width={50} height={50} src="/signal.gif" alt="Mobile Optimized" className="w-full h-full object-contain" />
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">Mobile Optimized</h3>
       <p className="text-gray-300">Designed to look stunning on every screen size and device.</p>
@@ -150,7 +150,7 @@ export default function Home() {
     {/* Card 4 */}
     <div className="bg-[#2b2b2b] rounded-2xl p-6 shadow-xl hover:shadow-purple-500/20 transition-shadow text-center">
       <div className="w-14 h-14 mx-auto mb-4">
-        <img src="/graph.gif" alt="Analytics Built-In" className="w-full h-full object-contain" />
+        <Image  width={50}  height={50}  src="/graph.gif" alt="Analytics Built-In" className="w-full h-full object-contain" />
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">Analytics Built-In</h3>
       <p className="text-gray-300">Track link clicks, traffic sources, and optimize your presence.</p>

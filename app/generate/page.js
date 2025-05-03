@@ -4,6 +4,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Image from 'next/image';
 
 const Generate = () => {
     const searchParams = useSearchParams();
@@ -120,7 +121,7 @@ const Generate = () => {
 
             {/* Right Side Image */}
             <div className="flex-1 flex justify-center items-center">
-                <img src="/generate.png" alt="bitlink preview" />
+                <Image width={400} height={400} src="/generate.png" alt="bitlink preview" />
             </div>
 
             <ToastContainer />
