@@ -20,13 +20,14 @@ Built with **Next.js**, **Tailwind CSS**, **Node.js**, and **MongoDB**, it’s f
 - **Frontend:** Next.js, Tailwind CSS  
 - **Backend:** Node.js, Express  
 - **Database:** MongoDB  
-- **Hosting/Deployment:** (Optional) Vercel / Render / Your choice
 
 ---
 
 ## 🖼️ Preview
 
 Here are some screenshots of the live project:
+
+
 ![image](https://github.com/user-attachments/assets/2b09c31d-c615-42a2-b9fa-e6f2ea917506)
 ![image](https://github.com/user-attachments/assets/fa1aa2ec-3b5f-4a73-ac37-29cfc37575ab)
 ![image](https://github.com/user-attachments/assets/4b1a0446-768d-46c6-bab6-226ad967b356)
