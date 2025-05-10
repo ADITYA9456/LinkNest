@@ -27,12 +27,10 @@ Built with **Next.js**, **Tailwind CSS**, **Node.js**, and **MongoDB**, it’s f
 ## 🖼️ Preview
 
 Here are some screenshots of the live project:
+![image](https://github.com/user-attachments/assets/2b09c31d-c615-42a2-b9fa-e6f2ea917506)
+![image](https://github.com/user-attachments/assets/fa1aa2ec-3b5f-4a73-ac37-29cfc37575ab)
+![image](https://github.com/user-attachments/assets/4b1a0446-768d-46c6-bab6-226ad967b356)
 
-<img src="/public/preview1.png" width="800" alt="Preview 1"/>
-<br/>
-<img src="/public/preview2.png" width="800" alt="Preview 2"/>
-<br/>
-<img src="/public/preview3.png" width="800" alt="Preview 3"/>
 
 ---
 
