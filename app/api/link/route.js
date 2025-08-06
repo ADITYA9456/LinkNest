@@ -1,22 +1,60 @@
-import clientPromise from "@/lib/mongobd"
-
+import clientPromise from "@/lib/mongobd";
+import { NextResponse } from 'next/server';
 
 export async function POST(request) {
-    const body = await request.json()
-    const client = await clientPromise;
-    const db = client.db("LinkNest")
-    const collection = db.collection("links")
+    try {
+        const body = await request.json()
+        
+        // Validate required fields
+        if (!body.handle || !body.links) {
+            return NextResponse.json({
+                error: true, 
+                message: "Handle and links are required", 
+                success: false, 
+                result: null
+            }, { status: 400 })
+        }
 
-// if handle is already present in the database then return error
-    const existingLink = await collection.findOne({ handle:body.handle})
+        const client = await clientPromise;
+        const db = client.db("LinkNest")
+        const collection = db.collection("links")
 
-    if (existingLink) {
-        return Response.json({error: true, message: "Handle already exists" , success : false , result : null,})
+        // Check if handle already exists
+        const existingLink = await collection.findOne({ handle: body.handle })
+
+        if (existingLink) {
+            return NextResponse.json({
+                error: true, 
+                message: "Handle already exists", 
+                success: false, 
+                result: null
+            }, { status: 409 })
+        }
+
+        // Insert new link
+        const result = await collection.insertOne({
+            ...body,
+            createdAt: new Date(),
+            updatedAt: new Date()
+        })
+        
+        return NextResponse.json({
+            error: false, 
+            message: "Link is added", 
+            success: true, 
+            result: result
+        }, { status: 201 })
+        
+    } catch (error) {
+        console.error('Database error:', error)
+        return NextResponse.json({
+            error: true, 
+            message: "Internal server error", 
+            success: false, 
+            result: null
+        }, { status: 500 })
     }
-
-    const result = await collection.insertOne(body)
-    return Response.json({error: false, message: "Link is added" , success : true , result : result,  })
-  }
+}
 
 
 

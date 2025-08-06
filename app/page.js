@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../component/Navbar.js";
+import PWAInstallPrompt from "../component/PWAInstallPrompt.js";
 
 export default function Home() { 
   const router = useRouter()
@@ -401,6 +402,9 @@ export default function Home() {
           </motion.button>
         </motion.div>
       </motion.section>
+
+      {/* PWA Install Prompt */}
+      <PWAInstallPrompt />
     </main>
   );
 }

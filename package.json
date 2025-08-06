@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pwa:analyze": "npm run build && npx lighthouse http://localhost:3000 --preset=desktop --chrome-flags='--headless' --output=html --output-path=./lighthouse-report.html",
+    "pwa:test": "npm run build && npm run start & sleep 5 && curl -f http://localhost:3000/manifest.json && curl -f http://localhost:3000/sw.js && echo 'PWA files accessible!'",
+    "icons:generate": "echo 'Use the iconGenerator.js utility or online tools to create PWA icons'"
   },
   "dependencies": {
     "framer-motion": "^12.23.6",

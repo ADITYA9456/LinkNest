@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Disallow certain paths if needed
+# Disallow: /api/
+# Disallow: /_next/
+
+# Allow all robots for PWA
+Allow: /manifest.json
+Allow: /sw.js
+Allow: /offline
