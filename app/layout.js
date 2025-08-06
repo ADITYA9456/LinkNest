@@ -1,7 +1,7 @@
-import Footer from "@/component/Footer";
-import Navbar from "@/component/Navbar";
-import PWAStatus from "@/component/PWAStatus";
-import PWAUpdater from "@/component/PWAUpdater";
+import Footer from "../component/Footer";
+import Navbar from "../component/Navbar";
+import PWAStatus from "../component/PWAStatus";
+import PWAUpdater from "../component/PWAUpdater";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
