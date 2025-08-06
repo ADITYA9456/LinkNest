@@ -1,4 +1,4 @@
-import clientPromise from "@/lib/mongobd";
+import clientPromise from "../../../lib/mongobd";
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
