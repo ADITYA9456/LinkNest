@@ -1,6 +1,6 @@
-import clientPromise from "@/lib/mongobd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import clientPromise from "../../lib/mongobd";
 
 export default async function Page({ params }) {
     const handle = (await params).handle

@@ -48,11 +48,13 @@ export default function PWAInstallPrompt() {
 
   const handleDismiss = () => {
     setShowInstallPrompt(false)
-    localStorage.setItem('pwa-dismissed', 'true')
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('pwa-dismissed', 'true')
+    }
   }
 
   // Don't show if user already dismissed or app is installed
-  if (isInstalled || localStorage.getItem('pwa-dismissed') === 'true') {
+  if (isInstalled || (typeof window !== 'undefined' && localStorage.getItem('pwa-dismissed') === 'true')) {
     return null
   }
 
